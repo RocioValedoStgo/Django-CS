@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-#import django_heroku
+import django_heroku
 import dj_database_url
 from decouple import config #recurso de heroku
 
@@ -23,12 +23,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'sbz=030(p5=ezbhjqua2r^k5*9+%*ro-8()6xlr16sn#k3xcgv'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False #Por produccion
 
-ALLOWED_HOSTS = [] #la ULR que da heroku
+ALLOWED_HOSTS = ['https://appcs5.herokuapp.com/ '] #la ULR que da heroku
 
 
 # Application definition
@@ -150,7 +150,7 @@ except ImportError:
     pass #procedimiento vacio
 
 if not DEBUG:
-    #poner lo de SECRET_KEY SECRET_KEY = 'SECRET_KEY'
+    SECRET_KEY = 'SECRET_KEY'
     DATABASES = {
     'default': {
         'ENGINE' : 'django.db.backends.postgresql_psycopg2',
