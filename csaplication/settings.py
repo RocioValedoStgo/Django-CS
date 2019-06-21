@@ -165,7 +165,7 @@ MEDIA_URL ='/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 try:
-    from csaplication.local_settings import * #el * importa tada la config del archivo
+    from csaplication.local_settings import *  #el * importa tada la config del archivo
 except ImportError:
     pass #procedimiento vacio
 
@@ -183,4 +183,3 @@ if not DEBUG:
 }
     import django_heroku
     django_heroku.settings(locals())
-    
