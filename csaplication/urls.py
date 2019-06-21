@@ -27,6 +27,8 @@ urlpatterns = [
     re_path(r'^api/v1/profile/', include('Profile.urls')),
     re_path(r'^api/v1/profesor/',include('Profesor.urls')),
     re_path(r'^api/v1/estudiante/',include('Estudiante.urls')),
+    re_path(r'^api/v1/user/',include('User.urls')),
+    re_path(r'^api/v1/modulo/',include('Modulo.urls')),
     re_path(r'^api-auth/', include('rest_framework.urls')),
     re_path(r'^api/v1/cliente/', include('cliente.urls')),
     re_path(r'^api/v1/alumno/', include('alumno.urls'))
